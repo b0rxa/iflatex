@@ -1,0 +1,60 @@
+\documentclass[es]{ifreport}
+
+
+\begin{document}
+\title{Manual de uso del paquete \textit{ifreport.cls}}
+\author{Borja Calvo}
+
+\maketitle
+
+\begin{abstract}
+Este paquete ofrece una plantilla para crear documentos sencillos siguiendo (m\'as o menos) las indicaciones del manual de identidad corporativa de la Universidad del Pa\'is Vasco.
+\end{abstract}
+
+\section{Opciones del paquete}
+El paquete cuenta con dos grupos de opciones. Por una parte tenemos la opci\'on de especificar el campus en el que estamos con las opciones \textit{gipuzkoa}, \textit{bizkaia} y \textit{araba}. Si no se indica ninguna opci\'on, el valor por defecto es \textit{gipuzkoa}. En lo que respecta a la direcci\'on, esta se puede modificar por medio de un comando (ver siguiente apartado).
+
+Por otra parte, tambi\'en podemos especificar el idioma del documento, siendo las opciones euskara (eu), castellano (es) e ingl\'es (en). Esta opci\'on realiza algunos ajustes b\'asicos incluidos en el paquete \textit{babel}, adem\'as de cambios en puntos espec\'ificos de este paquete.
+
+Por \'ultimo la opci\'on \textit{texthead} permite cambiar el logo que aparece en la derecha por un texto (configurable por medio de comandos, como se ver\'a en el siguiente apartado).
+\section{Lista de comandos}
+
+La lista de comandos del paquete es la siguiente:
+
+\begin{itemize}
+\item \begin{verbatim}\name{nombre}\end{verbatim} Con este comando podemos especificar el nombre para que aparezca en el pie de la primera p\'agina.\item \begin{verbatim}\tel{telefonoa}\end{verbatim} Con este comando se especif\'ica el telefono que aparece al pie de la primera p\'agina.
+\item \begin{verbatim}\mail{email}\end{verbatim} Con este comando se especif\'ica el e-mail que aparece al pie de la primera p\'agina.
+\item \begin{verbatim}\addrs{direccion}\end{verbatim} Con este comando se especif\'ica la direcci\'on que aparece al pie de la primera p\'agina. Si no se indica nada, el valor por defecto es la direcci\'on de la facultad de inform\'atica de San Sebasti\'an.
+\item \begin{verbatim}\web{pagina personal}\end{verbatim} Con este comando se especif\'ica la URL que aparece en la primera p\'agina.
+\item \begin{verbatim}\rightlogo{logo}\end{verbatim} Con este comando se selecciona el logo que aparecer\'a en el lado derecho. Como opciones por defecto tenemos \textit{ehu}, para seleccionar el logo de la UPV/EHU, \textit{informaktika} para el logo de la facultad, \textit{isg}para el logo del grupo ISG y \textit{bioD} para el logo de Biodonostia. Adicionalmente se puede especificar la ruta del fichero (pdf,ps o eps) que contiene el logo que queremos usar. En caso de usar la opci\'on \textit{texthead} este comando no tendr\'a ning\'un efecto.
+\item \begin{verbatim}\leftlogo{logo}\end{verbatim} Similar al anterior salvo que en este caso configuramos el logo de la izquierda. Este comando si que puede usarse junto con la opci\'on \textit{texthead}, ya que esta solo afecta a logo de la derecha.
+\item \begin{verbatim}\saila{departamento}\end{verbatim} Este comando es solo v\'alido cuando usamos la opci\'on \textit{texthead}, y permite determinar la versi\'on en euskara del texto que reemplazar\'a el logo de la derecha. Dicho texto, siguiendo indicaciones del manual de identidad corporativa, aparecer\'a en negro.
+\item \begin{verbatim}\dpto{departamento}\end{verbatim} Lo mismo pero para la versi\'on en castellano del texto, la cual aparecer\'a en gris.
+\end{itemize}
+
+\section{Ejemplo de uso}
+
+He aqu\'i un ejemplo del uso del paquete
+
+\begin{verbatim}
+\documentclass[eu,texthead]{ifreport}
+
+\begin{document}
+
+\title{Izenburua}
+\author{Borja Calvo}
+
+\name{Borja Calvo}
+\saila{Konputazio Zientziak eta Adimen Artifiziala}
+\dpto{Ciencias de la Computaci\'on e Inteligencia Artificial}
+\tel{946 01 5555}
+\mail{borja.calvo@ehu.es}
+\web{http://www.ehu.es}
+
+\maketitle
+
+\begin{abstract}
+
+...
+\end{verbatim}
+\end{document}
