@@ -1,0 +1,62 @@
+\documentclass[eu]{ifirak}
+
+
+\begin{document}
+
+\title{Manual de uso del paquete \textit{ifirak.cls}}
+\author{Borja Calvo}
+
+\maketitle
+
+\begin{abstract}
+Este paquete ofrece una plantilla para crear documentos sencillos en el contexto de asignaturas de la facultad de inform\'atica de San Sebasti\'an (UPV/EHU). Es una adaptaci\'on del paquete \textit{ifreport}, el cual permite realizar m\'as modificaciones en la plantilla.
+\end{abstract}
+
+\section{Opciones del paquete}
+El paquete cuenta con dos grupos de opciones. Por una parte tenemos la opci\'on de especificar el campus en el que estamos con las opciones \textit{gipuzkoa}, \textit{bizkaia} y \textit{araba}. Si no se indica ninguna opci\'on, el valor por defecto es \textit{gipuzkoa}.
+
+Por otra parte, tambi\'en podemos especificar el idioma del documento, siendo las opciones euskara (eu), castellano (es) e ingl\'es (en). Esta opci\'on realiza algunos ajustes b\'asicos incluidos en el paquete \textit{babel}, adem\'as de cambios en puntos espec\'ificos de este paquete.
+
+\section{Lista de comandos}
+
+La lista de comandos del paquete es la siguiente:
+
+\begin{itemize}
+\item \begin{verbatim}\fakultatea{logo de la facultad/máster etc}\end{verbatim} Con este comando podemos especificar el logo que aparece a la derecha de la cabecera.
+\item \begin{verbatim}\irakaslea{nombre del profesor}\end{verbatim} Con este comando podemos especificar el nombre del profesor para que aparezca en el pie de la primera p\'agina.
+\item \begin{verbatim}\ikasturtea{curso}\end{verbatim} Con este comando se especif\'ica el curso acad\'emico (ejemplo, 2012/2013).
+\item \begin{verbatim}\irakasgaia{asignatura}\end{verbatim} Con este comando se especif\'ica la asignatura.
+\item \begin{verbatim}\tel{telefonoa}\end{verbatim} Con este comando se especif\'ica el telefono que aparece al pie de la primera p\'agina.
+\item \begin{verbatim}\mail{email}\end{verbatim} Con este comando se especif\'ica el e-mail que aparece al pie de la primera p\'agina.
+\item \begin{verbatim}\addrs{direccion}\end{verbatim} Con este comando se especif\'ica la direcci\'on que aparece al pie de la primera p\'agina. Si no se indica nada, el valor por defecto es la direcci\'on de la facultad de inform\'atica de San Sebasti\'an.
+\end{itemize}
+
+\section{Ejemplo de uso}
+
+He aqu\'i un ejemplo del uso del paquete
+
+\begin{verbatim}
+\documentclass[eu,bizkaia]{ifirak}
+
+\begin{document}
+
+\title{Izenburua}
+\author{Borja Calvo}
+
+\irakaslea{Borja Calvo}
+\irakasgaia{Bioinformatika}
+\ikasturtea{2013-2014}
+\tel{946 01 5555}
+\mail{borja.calvo@ehu.es}
+
+\addrs{Zientzia eta Teknologia Fakultatea\\
+Sarriena auzoa, z/g\\
+48940 Leioa (Bizkaia)}
+
+\maketitle
+
+\begin{abstract}
+
+...
+\end{verbatim}
+\end{document}
