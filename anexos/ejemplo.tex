@@ -1,0 +1,47 @@
+\documentclass{isgcvanexos}
+
+\usepackage{pdfpages}
+
+
+\nombre{Nombre y apellidos}
+\dni{DNI}
+\convocatoria{Plaza}
+\titulo{Justificaci\'on de los m\'eritos alegados en el Curriculum Vitae}
+
+\begin{document}
+\maketitle
+\contenidos
+
+
+%% Uso del comando insertardpf para insertar documentos pdf con multiples hojas e incluir una descripción del mismo en 
+%% el indice
+%
+% \insertarpdf[paginas-selecionadas]{descripcion a incluir en el indice}{path del fichero pdf}
+
+
+\apartado{Publicaciones}
+
+
+\insertarpdf[1,9]{Ejemplo de paper}{./paper.pdf}
+ 
+\apartado{Patentes}
+
+\apartado{Proyectos de Investigaci\'on}
+
+\apartado{Direcci\'on de tesis doctorales}
+
+\apartado{Formaci\'on Acad\'emica}
+
+\apartado{Becas}
+
+\apartado{Estancias en Centros Extranjeros}
+
+\apartado{Cursos de Especializaci\'on}
+
+\apartado{Experiencia Laboral}
+
+\apartado{Idiomas}
+
+\apartado{Otros M\'eritos}
+
+\end{document}
